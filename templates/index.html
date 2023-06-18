@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    <div id="next">
+      <span class="settings"><b>Code </b></span>
+       
+      <span class="settings"><b>& </b></span>
+      
+      <span class="settings"><b>Conquer</b></span>
+    </div>
+    <h1><i>&ldquo;Coding is the symphony of problem-solving, where algorithms compose the melody of success.&rdquo;</i></h1>
+    <div class="xd">
+    <div class="form" class="styled-form">
+      <form method="POST">
+        {{ form.hidden_tag() }} {{ form.search.label }} {{ form.search() }} {{ form.submit() }}
+      </form>
+    </div>
+    </div>
+    <div class="container">
+      {% for result in results %}
+      <div class="question-box">
+        <a href="{{ result['Question Link'] }}">{{ result['Question Title'] }}</a>
+        <label class="checkbox">
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+#next {
+  display: flex;
+  justify-content: center;
+}
+
+.settings {
+  background-image: linear-gradient(91.9deg, #4bcffa 6.3%, #199ff9 98.9%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 100px;
+  color: transparent;
+  display: flex;
+  padding-top: 50px;
+  text-align: center;
+  right: 100px;
+}
+
+h1 {
+  background-image: linear-gradient(91.9deg, #4bcffa 6.3%, white 98.9%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  text-align: center;
+  padding-top: 40px;
+  padding-right: 50px;
+  font-family: "Snell Roundhand", cursive;
+}
+
+body {
+  background-color: black;
+}
+
+.xd {
+  background-color: rgb(245, 245, 245);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 40px;
+  height: 100px;
+  width: 100%;
+  max-width: 700px;
+  background-color: grey;
+  position: relative;
+  margin: 0 auto; /* Center horizontally */
+  box-sizing: border-box; /* Add box-sizing property */
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Enable wrapping of question-box elements */
+  justify-content: center; /* Center the elements horizontally */
+  gap: 69px; /* Add gap between question-box elements */
+  padding: 100px; /* Add padding to the container */
+  max-width: 700px; /* Set maximum width for the container */
+  margin: 0 auto; /* Center horizontally */
+}
+
+.question-box {
+  display: flex;
+  padding: 10px;
+  gap: 200px;
+  margin-bottom: 40px;
+  height: 100px;
+  width: 100%;
+  max-width: 700px;
+  background-color: #1e1e1e;
+  opacity: 0;
+  animation: bounce 1s ease-in-out forwards;
+  animation-delay: 0.2s;
+  transform-origin: bottom;
+  box-shadow: 0 0 20px silver;
+  margin: 0 auto; /* Center horizontally */
+  border-radius: 5px;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.question-box:hover {
+  transform: translateX(10px);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.question-box a {
+  position: relative;
+  padding-top: 40px;
+  padding-right: 60px;
+  text-align: left;
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 900;
+  font-size: 23px;
+  word-spacing: 10px;
+}
+.question-box {
+  position: relative;
+}
+
+.checkbox {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: inline-block;
+}
+
+.checkbox input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkmark {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #999;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.checkbox input:checked ~ .checkmark {
+  background-color: #00b300;
+  border-color: #00b300;
+}
+
+.checkmark:after {
+  content: "";
+  display: none;
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
